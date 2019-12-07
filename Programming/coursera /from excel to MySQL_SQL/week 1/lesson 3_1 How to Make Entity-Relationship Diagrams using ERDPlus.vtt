@@ -1,0 +1,310 @@
+WEBVTT
+
+1
+00:00:04.491 --> 00:00:09.330
+Now that you know how ER diagrams and
+relational schemas work, is going to show
+
+2
+00:00:09.330 --> 00:00:13.770
+us how to use his tool ERDPlus to
+make your own diagrams and schemas.
+
+3
+00:00:13.770 --> 00:00:15.820
+The tool can be found at erdplus.com.
+
+4
+00:00:15.820 --> 00:00:19.300
+When you go to the web site, you'll
+see a place where you can sign up for
+
+5
+00:00:19.300 --> 00:00:22.362
+a free account so that you can save and
+revise your work.
+
+6
+00:00:22.362 --> 00:00:25.060
+Once you make an account you'll
+see this home screen for
+
+7
+00:00:25.060 --> 00:00:27.560
+all the diagrams you've made are listed.
+
+8
+00:00:27.560 --> 00:00:28.910
+If you make a new diagram or
+
+9
+00:00:28.910 --> 00:00:33.290
+open up an old one the program brings you
+to this work space for diagram service.
+
+10
+00:00:33.290 --> 00:00:36.181
+To orient you all the buttons
+that allow you to add new parts
+
+11
+00:00:36.181 --> 00:00:39.530
+to the diagram are up here
+at the top of the screen.
+
+12
+00:00:39.530 --> 00:00:41.750
+All of the menu items that let you name or
+
+13
+00:00:41.750 --> 00:00:45.150
+define parts of a diagram are over
+here to the right side of the screen.
+
+14
+00:00:46.170 --> 00:00:48.450
+Once you have a diagram
+that you are happy with,
+
+15
+00:00:48.450 --> 00:00:52.390
+remember this diagram button all
+the way over here to the upper left.
+
+16
+00:00:52.390 --> 00:00:55.830
+It will let you export the diagram as
+an image so that you can save it for
+
+17
+00:00:55.830 --> 00:00:57.370
+reference later.
+
+18
+00:00:57.370 --> 00:00:59.880
+I think you will find the tool
+to be very intuitive.
+
+19
+00:00:59.880 --> 00:01:01.390
+I'll let Nenad take it from here.
+
+20
+00:01:03.130 --> 00:01:03.640
+>> Hello.
+
+21
+00:01:03.640 --> 00:01:05.300
+My name is Nenad Jukic.
+
+22
+00:01:05.300 --> 00:01:09.180
+I'm a Professor of Information Systems
+at Quinlan School of Business,
+
+23
+00:01:09.180 --> 00:01:10.780
+at Loyola University Chicago.
+
+24
+00:01:12.340 --> 00:01:15.460
+I'm excited that you're
+about to use ERD plus.
+
+25
+00:01:15.460 --> 00:01:16.770
+This is an excellent tool for
+
+26
+00:01:16.770 --> 00:01:19.870
+people who are trying to learn
+about databases such as yourself.
+
+27
+00:01:19.870 --> 00:01:23.580
+I hope you enjoy the tool and
+good luck with your course.
+
+28
+00:01:24.690 --> 00:01:29.320
+This video demonstrates how to use
+ERDPlus to create a ER diagram.
+
+29
+00:01:29.320 --> 00:01:32.270
+Once you're logged into your account,
+go to the diagram section.
+
+30
+00:01:34.110 --> 00:01:37.290
+Click on the new,
+then choose ER diagram option.
+
+31
+00:01:38.800 --> 00:01:42.680
+Click on the name of the new ER
+diagram to enter the drawing surface.
+
+32
+00:01:42.680 --> 00:01:46.270
+Let's create a small ER diagram.
+
+33
+00:01:46.270 --> 00:01:50.100
+We will click on the entity icon and
+
+34
+00:01:50.100 --> 00:01:53.450
+place the entity anywhere
+in the drawing surface.
+
+35
+00:01:53.450 --> 00:01:55.410
+We will name this first entity location.
+
+36
+00:01:58.130 --> 00:02:02.791
+We will add two attributes to this entity,
+location id and
+
+37
+00:02:02.791 --> 00:02:06.030
+location name.
+
+38
+00:02:06.030 --> 00:02:08.030
+We will declare location id to be unique.
+
+39
+00:02:10.080 --> 00:02:11.360
+Now let's add another entity.
+
+40
+00:02:12.630 --> 00:02:15.000
+We'll name this entity Project.
+
+41
+00:02:17.650 --> 00:02:19.700
+We'll add attributes.
+
+42
+00:02:19.700 --> 00:02:21.980
+Project ID and Project Name.
+
+43
+00:02:23.240 --> 00:02:24.030
+Project ID is unique.
+
+44
+00:02:25.480 --> 00:02:26.410
+We'll add one more entity.
+
+45
+00:02:27.530 --> 00:02:28.790
+We'll name this one Employee.
+
+46
+00:02:34.520 --> 00:02:38.540
+Employee has Employee ID which
+is unique and employee name.
+
+47
+00:02:41.580 --> 00:02:44.790
+Now, we can create some relationships
+between these entities.
+
+48
+00:02:44.790 --> 00:02:49.090
+To create the relationship,
+we have to click on the connect icon
+
+49
+00:02:49.090 --> 00:02:53.480
+then click on one entity in this case
+project and drag to another one.
+
+50
+00:02:53.480 --> 00:02:55.350
+In this case, location.
+
+51
+00:02:55.350 --> 00:02:58.960
+We just created a relationship
+between project and location.
+
+52
+00:02:58.960 --> 00:03:00.990
+We will call this
+relationship Takes Place.
+
+53
+00:03:03.880 --> 00:03:07.210
+Now we will declare cardinality
+constraint for this relationship.
+
+54
+00:03:08.660 --> 00:03:16.130
+Each project takes place at exactly
+one location, whereas each location
+
+55
+00:03:17.530 --> 00:03:21.750
+has at least one project taking
+place at it but can have many.
+
+56
+00:03:23.050 --> 00:03:25.900
+Now let's create a relationship
+between employee and project.
+
+57
+00:03:25.900 --> 00:03:30.020
+Again, we'll click on Connect, click
+on EMPLOYEE and drag over to PROJECT.
+
+58
+00:03:31.620 --> 00:03:38.558
+We will name this relationship WORKSON.
+
+59
+00:03:41.365 --> 00:03:46.390
+Each employee works on at least
+one project but can work on many.
+
+60
+00:03:46.390 --> 00:03:51.880
+Each project has at least one employee
+working on it but can have many.
+
+61
+00:03:53.870 --> 00:03:56.560
+Works on is a many to many relationship,
+
+62
+00:03:56.560 --> 00:04:00.060
+many to many relationships
+can have attributes.
+
+63
+00:04:00.060 --> 00:04:03.595
+To demonstrate, we will create an
+attribute for this relationship WORKSON.
+
+64
+00:04:05.437 --> 00:04:09.500
+We will create an attribute,
+and name it, number of hours.
+
+65
+00:04:12.390 --> 00:04:17.350
+Signifying that it keeps track
+of number of hours that each
+
+66
+00:04:17.350 --> 00:04:20.210
+employee works on each project.
+
+67
+00:04:20.210 --> 00:04:24.360
+This conclude a small demo of how to
+create an ER diagram using ERD plus.

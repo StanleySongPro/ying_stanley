@@ -1,0 +1,354 @@
+WEBVTT
+
+1
+00:00:03.657 --> 00:00:07.145
+Last video we heard about how
+relational databases use set theory and
+
+2
+00:00:07.145 --> 00:00:11.051
+relational algebra to allow us to pull
+pretty much whatever data we want out of
+
+3
+00:00:11.051 --> 00:00:13.020
+a relational database.
+
+4
+00:00:13.020 --> 00:00:16.890
+In this video, we are going to talk about
+how you learn to tell a database what you
+
+5
+00:00:16.890 --> 00:00:17.459
+want out of it.
+
+6
+00:00:18.510 --> 00:00:21.430
+The way you ask a database to
+give you data is to write and
+
+7
+00:00:21.430 --> 00:00:23.710
+execute what is called a query.
+
+8
+00:00:23.710 --> 00:00:24.540
+The language or
+
+9
+00:00:24.540 --> 00:00:28.760
+code you use to write the queries is
+SQL or structured query language.
+
+10
+00:00:28.760 --> 00:00:33.910
+SQL is used by every relational database
+management system, abbreviated DBMS,
+
+11
+00:00:33.910 --> 00:00:38.110
+even if there are some slight nuanced
+differences across platforms.
+
+12
+00:00:39.140 --> 00:00:41.790
+As a data analyst, you are almost
+guaranteed to interact with the relational
+
+13
+00:00:41.790 --> 00:00:45.190
+database at some point in your career,
+if not everyday.
+
+14
+00:00:45.190 --> 00:00:48.195
+But even if you are interacting with
+databases that do not use traditional
+
+15
+00:00:48.195 --> 00:00:51.830
+relational structures, most database
+management systems try really
+
+16
+00:00:51.830 --> 00:00:55.540
+hard to create query languages that
+look as similar as possible to SQL.
+
+17
+00:00:55.540 --> 00:00:58.940
+Because SQL is so intuitive and so
+ubiquitous in the database world.
+
+18
+00:01:00.020 --> 00:01:03.070
+Therefore, no matter what database
+platform you end up working with,
+
+19
+00:01:03.070 --> 00:01:04.960
+it will advance your
+career if you learn SQL.
+
+20
+00:01:04.960 --> 00:01:08.430
+And the more you understand
+about SQL truly works,
+
+21
+00:01:08.430 --> 00:01:10.120
+the greater edge you will
+have in the marketplace.
+
+22
+00:01:11.280 --> 00:01:14.230
+I have a slightly different view of
+learning SQL than you will find in many of
+
+23
+00:01:14.230 --> 00:01:15.900
+the courses out there.
+
+24
+00:01:15.900 --> 00:01:19.740
+As a data analyst, you will be making lots
+of queries, but you will not be setting up
+
+25
+00:01:19.740 --> 00:01:22.855
+or maintaining databases unless you
+are working in an early stage startup.
+
+26
+00:01:22.855 --> 00:01:27.580
+Nonetheless, my experience has taught
+me that you will learn queries
+
+27
+00:01:27.580 --> 00:01:30.460
+much faster and
+your queries will be much more efficient
+
+28
+00:01:30.460 --> 00:01:33.970
+if you know some of the basic tools
+that are used to set up databases.
+
+29
+00:01:33.970 --> 00:01:37.140
+In addition, if you know how to read
+the documents database engineers and
+
+30
+00:01:37.140 --> 00:01:41.220
+managers create, your life will be much
+easier when you start writing queries and
+
+31
+00:01:41.220 --> 00:01:44.060
+you'll be less likely to make certain
+kinds of mistakes that lead you to
+
+32
+00:01:44.060 --> 00:01:44.980
+misinterpret your data.
+
+33
+00:01:46.226 --> 00:01:49.630
+So I really wanted to find ways to give
+students in this course exposure to
+
+34
+00:01:49.630 --> 00:01:52.490
+the tools that are used
+to design a database.
+
+35
+00:01:52.490 --> 00:01:56.350
+Fortunately, the person who wrote my
+favorite tools was very generously willing
+
+36
+00:01:56.350 --> 00:01:58.260
+to share his resources with us.
+
+37
+00:01:58.260 --> 00:02:02.330
+Perhaps not surprisingly,
+he also shares my view about learning SQL.
+
+38
+00:02:02.330 --> 00:02:05.022
+Here he is.
+
+39
+00:02:05.022 --> 00:02:09.810
+>> Hello, my name is Nenad Jukic, and
+I'm a Professor of Information Systems at
+
+40
+00:02:09.810 --> 00:02:13.450
+Quinlan School of Business at
+Loyola University Chicago.
+
+41
+00:02:14.650 --> 00:02:19.860
+It is difficult to learn
+SQL as a pure beginner if
+
+42
+00:02:19.860 --> 00:02:27.220
+one doesn't know some basic things
+about relational database model itself.
+
+43
+00:02:27.220 --> 00:02:29.940
+The main concept in
+relational database model
+
+44
+00:02:29.940 --> 00:02:33.070
+that connects tables of
+a concept of a foreign key.
+
+45
+00:02:33.070 --> 00:02:37.257
+And if a person doesn't really
+understand why is it there,
+
+46
+00:02:37.257 --> 00:02:41.770
+how it works,
+it makes learning SQL very unnatural.
+
+47
+00:02:41.770 --> 00:02:47.640
+So the best way to learn SQL in
+my opinion is to first learn
+
+48
+00:02:47.640 --> 00:02:52.940
+few basic things about database design and
+modeling before we start learning SQL.
+
+49
+00:02:52.940 --> 00:02:57.040
+>> Entity-Relationship diagrams or
+ER diagrams
+
+50
+00:02:57.040 --> 00:02:59.830
+are one of the database design tools that
+will be useful for you to understand.
+
+51
+00:02:59.830 --> 00:03:02.930
+ER diagrams are pictures
+that represent how
+
+52
+00:03:02.930 --> 00:03:06.210
+the data in a database are supposed to
+be connected or related to one another.
+
+53
+00:03:07.420 --> 00:03:10.900
+Relational schemas are another database
+tool you will benefit from learning how to
+
+54
+00:03:10.900 --> 00:03:12.380
+read and understand.
+
+55
+00:03:12.380 --> 00:03:15.890
+Relational schemas are basically
+maps of the database.
+
+56
+00:03:15.890 --> 00:03:19.630
+Sometimes relational schemas are missing
+important information, that is contained
+
+57
+00:03:19.630 --> 00:03:23.129
+in an ER diagram, so it is useful to
+practice and understand both tools.
+
+58
+00:03:24.235 --> 00:03:27.130
+Nenad has made a very well
+design online program that
+
+59
+00:03:27.130 --> 00:03:30.950
+will allow us to practice making both
+ER diagrams and relational schemas.
+
+60
+00:03:30.950 --> 00:03:32.670
+So here's what we're going to do for
+the rest of this week.
+
+61
+00:03:32.670 --> 00:03:36.640
+In the next few videos, we are going
+to go over some practical concepts of
+
+62
+00:03:36.640 --> 00:03:40.880
+how relational databases are organized,
+and go over how to make ER diagrams and
+
+63
+00:03:40.880 --> 00:03:42.530
+relational schemas.
+
+64
+00:03:42.530 --> 00:03:47.170
+Then Nenad will show you himself how to
+use the great online tool he created.
+
+65
+00:03:47.170 --> 00:03:49.146
+After practicing with
+a couple assignments,
+
+66
+00:03:49.146 --> 00:03:52.035
+you will answer some questions about
+the relational schema of a real
+
+67
+00:03:52.035 --> 00:03:55.449
+life department store data set we will be
+using in the later weeks of the course.
+
+68
+00:03:55.449 --> 00:03:58.258
+And you will make your own ER diagram and
+relational schema for
+
+69
+00:03:58.258 --> 00:04:00.429
+the real life startup data
+set we will be using.
+
+70
+00:04:01.440 --> 00:04:04.400
+This will prepare you how to start
+learning how to answer business questions
+
+71
+00:04:04.400 --> 00:04:08.480
+about those data sets next week
+when we start writing SQL queries.
+
+72
+00:04:08.480 --> 00:04:09.480
+Are you excited?
+
+73
+00:04:09.480 --> 00:04:10.267
+I hope so.

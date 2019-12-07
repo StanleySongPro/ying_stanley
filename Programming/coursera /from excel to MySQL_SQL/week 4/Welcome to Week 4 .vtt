@@ -1,0 +1,329 @@
+WEBVTT
+
+1
+00:00:04.664 --> 00:00:09.630
+Welcome to the final week of
+Managing Big Data with MySQL and Teradata.
+
+2
+00:00:09.630 --> 00:00:12.870
+You have done a terrific job working
+through all the exercises that teach you
+
+3
+00:00:12.870 --> 00:00:14.600
+how to write SQL queries.
+
+4
+00:00:14.600 --> 00:00:17.480
+This week we are going to learn a couple
+of additional tools that will make
+
+5
+00:00:17.480 --> 00:00:21.170
+it easier for you to write queries that
+extract the specific data you want.
+
+6
+00:00:21.170 --> 00:00:24.390
+The first thing you are going to
+learn is how to write subqueries.
+
+7
+00:00:24.390 --> 00:00:28.880
+Subqueries, also known as inner queries,
+or nested queries, are a mechanism for
+
+8
+00:00:28.880 --> 00:00:32.380
+breaking up the operations in
+an overall query into separate steps.
+
+9
+00:00:32.380 --> 00:00:36.430
+By doing this, subqueries help solve a lot
+of problems we encounter with aggregation
+
+10
+00:00:36.430 --> 00:00:39.310
+functions and joins, and
+sometimes provide us with more
+
+11
+00:00:39.310 --> 00:00:42.890
+elegant ways to represent
+the logic behind our queries.
+
+12
+00:00:42.890 --> 00:00:46.160
+You'll see that the first trick to
+subqueries is making sure you format
+
+13
+00:00:46.160 --> 00:00:50.060
+them so that it's easy to see which parts
+of the query will be executed together.
+
+14
+00:00:50.060 --> 00:00:53.750
+The second trick is to write and interpret
+the subquery starting with the innermost
+
+15
+00:00:53.750 --> 00:00:58.430
+query first, working your way out
+step by step to the outermost query.
+
+16
+00:00:58.430 --> 00:01:00.440
+You will already know how
+this works after completing
+
+17
+00:01:00.440 --> 00:01:02.590
+the first exercise of this week.
+
+18
+00:01:02.590 --> 00:01:05.510
+After that,
+we will learn about a couple other logical
+
+19
+00:01:05.510 --> 00:01:08.650
+functions that you might want to use
+in your analysis of business data.
+
+20
+00:01:08.650 --> 00:01:11.040
+Then in the last phase of
+this week's assignments,
+
+21
+00:01:11.040 --> 00:01:14.200
+we're going to talk about how to translate
+your analysis objectives into questions
+
+22
+00:01:14.200 --> 00:01:16.040
+that can be addressed through queries.
+
+23
+00:01:16.040 --> 00:01:19.590
+The first thing you need to do in order to
+accomplish these objectives is figure out
+
+24
+00:01:19.590 --> 00:01:21.450
+the right questions to ask, and
+
+25
+00:01:21.450 --> 00:01:25.310
+come up with a plan about how you're going
+to answer those questions efficiently.
+
+26
+00:01:25.310 --> 00:01:28.171
+Here's Elliot Cohen again,
+producer at Dognition,
+
+27
+00:01:28.171 --> 00:01:32.352
+giving us his opinion about how important
+this part of the analysis process is.
+
+28
+00:01:32.352 --> 00:01:36.737
+>> The most important thing that we found
+is that you have to go into every test
+
+29
+00:01:36.737 --> 00:01:38.020
+with a question.
+
+30
+00:01:38.020 --> 00:01:39.160
+You need to have a hypothesis, and
+
+31
+00:01:39.160 --> 00:01:40.950
+you need to know exactly what
+you're doing to test that.
+
+32
+00:01:40.950 --> 00:01:42.210
+Because if you're just going in and
+looking,
+
+33
+00:01:42.210 --> 00:01:46.010
+either you're going to find things
+that don't matter, which is useless.
+
+34
+00:01:46.010 --> 00:01:47.790
+Or you're not going to find
+anything which is equally useless.
+
+35
+00:01:47.790 --> 00:01:51.120
+So find a testable
+hypothesis before you go in,
+
+36
+00:01:51.120 --> 00:01:52.690
+is the only really
+important thing I'd say.
+
+37
+00:01:53.890 --> 00:01:56.983
+>> We are going to talk about resources
+you can use to design an analysis plan
+
+38
+00:01:56.983 --> 00:01:59.680
+based on specific hypotheses and
+questions.
+
+39
+00:01:59.680 --> 00:02:02.390
+Then we're going to use
+the analysis plan we've created for
+
+40
+00:02:02.390 --> 00:02:07.040
+our Dognition project to practice turning
+business questions into SQL queries.
+
+41
+00:02:07.040 --> 00:02:10.200
+Many of the questions we will ask about
+Dognition users would be similar to
+
+42
+00:02:10.200 --> 00:02:13.560
+the questions business analysts
+at Box ask about their users.
+
+43
+00:02:13.560 --> 00:02:16.370
+Here's Ryan Lueke again.
+
+44
+00:02:16.370 --> 00:02:20.710
+>> Yes,
+our business analysts use SQL to query
+
+45
+00:02:20.710 --> 00:02:24.320
+data that we have about how users use Box.
+
+46
+00:02:24.320 --> 00:02:29.070
+So both usage patterns, like,
+how active are our users?
+
+47
+00:02:29.070 --> 00:02:33.300
+How many active 30 day users do we have or
+7 day?
+
+48
+00:02:33.300 --> 00:02:36.700
+Or how many pieces of content
+do they upload per week?
+
+49
+00:02:36.700 --> 00:02:39.580
+Or are they active mostly on weekdays or
+weekends?
+
+50
+00:02:39.580 --> 00:02:43.700
+Based on their locale,
+what sort of collaboration do they do?
+
+51
+00:02:43.700 --> 00:02:48.240
+How about the difference between how
+users in our free tier operate versus
+
+52
+00:02:48.240 --> 00:02:51.610
+how users in our business or
+enterprise class tiers operate?
+
+53
+00:02:52.870 --> 00:02:55.830
+>> You will address questions that
+are very similar to these in the exercises
+
+54
+00:02:55.830 --> 00:02:56.749
+you will complete this week.
+
+55
+00:02:58.120 --> 00:03:01.490
+I think one of the hardest parts about
+learning SQL is figuring out how to
+
+56
+00:03:01.490 --> 00:03:04.150
+translate the words you would
+use to describe the analytical
+
+57
+00:03:04.150 --> 00:03:08.850
+results you know you want to achieve, into
+actual SQL query language on a screen.
+
+58
+00:03:08.850 --> 00:03:10.840
+The best way to do that is
+through practice writing
+
+59
+00:03:10.840 --> 00:03:13.180
+queries that are specifically
+designed to help you analyze and
+
+60
+00:03:13.180 --> 00:03:15.470
+interpret the data you
+have in front of you.
+
+61
+00:03:15.470 --> 00:03:19.590
+So you will start that practice using
+queries related to our Dognition analysis
+
+62
+00:03:19.590 --> 00:03:21.999
+plan, which you will go
+through step by step.
+
+63
+00:03:21.999 --> 00:03:25.360
+Then you will answer many similar
+queries using the Dillard's data set.
+
+64
+00:03:25.360 --> 00:03:28.358
+In essence, we're going to practice,
+practice, practice, and
+
+65
+00:03:28.358 --> 00:03:29.524
+then practice some more.
+
+66
+00:03:29.524 --> 00:03:32.651
+By the end, you will feel confident
+claiming that you know how to write SQL
+
+67
+00:03:32.651 --> 00:03:34.880
+queries to create business value.
+
+68
+00:03:34.880 --> 00:03:36.160
+Let's jump in and start, shall we?

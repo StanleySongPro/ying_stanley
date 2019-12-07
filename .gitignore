@@ -1,0 +1,9 @@
+*.DS_Store
+*.spyproject
+*.ipynb_checkpoints
+*Icon?
+*/project_venv
+*.pyc
+*.npy
+*.gz
+*.zip

@@ -1,0 +1,451 @@
+WEBVTT
+
+1
+00:00:04.462 --> 00:00:08.250
+Last week, you gained a significant
+advantage over analysts who don't know how
+
+2
+00:00:08.250 --> 00:00:10.160
+to interact with databases.
+
+3
+00:00:10.160 --> 00:00:13.580
+You gained the ability to locate and
+describe all the data in a database and
+
+4
+00:00:13.580 --> 00:00:16.010
+how to export the data for analysis.
+
+5
+00:00:16.010 --> 00:00:19.160
+This week, we are going to take
+your skills to the next level.
+
+6
+00:00:19.160 --> 00:00:22.390
+You are going to learn how to summarize
+values across entire columns, and
+
+7
+00:00:22.390 --> 00:00:25.250
+break those summaries up
+according to values and columns.
+
+8
+00:00:25.250 --> 00:00:29.280
+We're also going to learn how to combine
+information from multiple tables.
+
+9
+00:00:29.280 --> 00:00:32.230
+What you learn to do this week will
+form the foundation of everything you do
+
+10
+00:00:32.230 --> 00:00:35.500
+as a data analyst, because these
+are the query tools that will allow you
+
+11
+00:00:35.500 --> 00:00:37.620
+to manipulate your data
+into whatever categories or
+
+12
+00:00:37.620 --> 00:00:39.670
+segments you're interested in.
+
+13
+00:00:39.670 --> 00:00:42.290
+For those of you who took
+the Tableau course prior to this,
+
+14
+00:00:42.290 --> 00:00:45.190
+you'll basically be learning how
+to use SQL to implement the same
+
+15
+00:00:45.190 --> 00:00:48.899
+calculations you implement when you drag
+variables onto the columns and row cells.
+
+16
+00:00:51.050 --> 00:00:53.430
+There are many ways to summarize data.
+
+17
+00:00:53.430 --> 00:00:56.170
+Some of most common methods
+are to count the number or
+
+18
+00:00:56.170 --> 00:01:01.020
+observations, add together all the values
+in a set of rows, take the average of all
+
+19
+00:01:01.020 --> 00:01:06.090
+the values in a set or rows, or
+report the maximum value of a set of rows.
+
+20
+00:01:06.090 --> 00:01:09.440
+Each of this summary methods
+aggregate your data in some fashion.
+
+21
+00:01:09.440 --> 00:01:12.980
+And parallel with that,
+the terms count, sum, average, and
+
+22
+00:01:12.980 --> 00:01:16.030
+max are all called
+aggregation functions in SQL.
+
+23
+00:01:17.130 --> 00:01:20.730
+Aggregation functions themselves
+are very intuitive to understand,
+
+24
+00:01:20.730 --> 00:01:23.620
+because we're used to making
+those types of calculations.
+
+25
+00:01:23.620 --> 00:01:26.910
+This week, you will practice one of
+the slightly more challenging use cases of
+
+26
+00:01:26.910 --> 00:01:30.120
+aggregation functions,
+which is when you have to combine columns
+
+27
+00:01:30.120 --> 00:01:32.040
+that have to be aggregated
+in different ways.
+
+28
+00:01:33.120 --> 00:01:35.890
+One of the reasons this use case can be
+challenging is because you have to be
+
+29
+00:01:35.890 --> 00:01:38.440
+remember to use the appropriate
+aggregation function for
+
+30
+00:01:38.440 --> 00:01:40.800
+every column you want to
+include in your output.
+
+31
+00:01:40.800 --> 00:01:44.270
+For example, imagine that you
+run a specialty camera store and
+
+32
+00:01:44.270 --> 00:01:47.570
+you are interested in how many sales
+each of your employee make, and
+
+33
+00:01:47.570 --> 00:01:50.219
+how satisfied customers are with
+each of your employee's service.
+
+34
+00:01:51.390 --> 00:01:54.270
+The data you have to address these
+questions when the appropriate tables
+
+35
+00:01:54.270 --> 00:01:58.980
+are combined has one column for employee
+name, one column for every sale made, and
+
+36
+00:01:58.980 --> 00:01:59.530
+one column for
+
+37
+00:01:59.530 --> 00:02:03.910
+the satisfaction rating customers gave at
+the end of every sale an employee made.
+
+38
+00:02:03.910 --> 00:02:06.840
+To aggregate the data in these
+columns according to employee,
+
+39
+00:02:06.840 --> 00:02:10.110
+you have to separate all the rows
+associated with the given employee,
+
+40
+00:02:10.110 --> 00:02:14.310
+and then summarize the values in each
+of the other columns in some fashion.
+
+41
+00:02:14.310 --> 00:02:18.290
+To do that in SQL Query, you have to tell
+the database exactly what columns of
+
+42
+00:02:18.290 --> 00:02:22.450
+data you're interested in from exactly
+what table or tables using the select and
+
+43
+00:02:22.450 --> 00:02:24.650
+from clauses you learned last week.
+
+44
+00:02:24.650 --> 00:02:27.550
+Then, in addition, you have to
+tell the database how to break up
+
+45
+00:02:27.550 --> 00:02:30.640
+the rows by employee using
+a group bias statement.
+
+46
+00:02:30.640 --> 00:02:33.990
+The important thing to remember is that
+you have to explicitly tell the database
+
+47
+00:02:33.990 --> 00:02:36.960
+how to summarize the rows of each
+of the columns separately, and
+
+48
+00:02:36.960 --> 00:02:40.110
+you have to use the correct
+aggregation function for each column.
+
+49
+00:02:40.110 --> 00:02:44.570
+Here, for example, we want to count or
+sum all the values in the sales column for
+
+50
+00:02:44.570 --> 00:02:48.660
+each employee, but we want to average all
+the values in the customer rating column.
+
+51
+00:02:48.660 --> 00:02:52.460
+We have to enter this function separately,
+and in the appropriate place.
+
+52
+00:02:53.590 --> 00:02:56.660
+Remember that doing an analysis
+using an SQL, or Tableau for
+
+53
+00:02:56.660 --> 00:02:59.780
+that matter, is a little different
+than doing analysis in Excel,
+
+54
+00:02:59.780 --> 00:03:04.770
+because all of your SQL results are
+exported as a table, not a worksheet, and
+
+55
+00:03:04.770 --> 00:03:07.550
+therefor they have to
+fit into a table format.
+
+56
+00:03:07.550 --> 00:03:10.790
+Practically, that means every row
+in your table has to use the same
+
+57
+00:03:10.790 --> 00:03:12.220
+aggregation level.
+
+58
+00:03:12.220 --> 00:03:14.060
+It's not always intuitive how to do that,
+
+59
+00:03:14.060 --> 00:03:18.080
+especially when you want to divide your
+results up according to different groups.
+
+60
+00:03:18.080 --> 00:03:21.610
+To get a feeling for this, imagine you are
+still interested in your employees' sale
+
+61
+00:03:21.610 --> 00:03:25.910
+numbers and customer satisfaction ratings,
+but now you also want to know if and
+
+62
+00:03:25.910 --> 00:03:29.910
+how the gender of your employees
+relates to those performance measures.
+
+63
+00:03:29.910 --> 00:03:33.670
+Your data have the same columns as before,
+but now also have a gender column.
+
+64
+00:03:34.690 --> 00:03:36.610
+When you group your rows
+by employee number,
+
+65
+00:03:36.610 --> 00:03:39.590
+you can still count the number of
+entries in the sales column, and
+
+66
+00:03:39.590 --> 00:03:42.380
+average the customer ratings
+in the ratings column, but
+
+67
+00:03:42.380 --> 00:03:45.440
+what would you do to summarize the gender
+information in the gender column so
+
+68
+00:03:45.440 --> 00:03:48.490
+that there is only one
+gender value per employee?
+
+69
+00:03:48.490 --> 00:03:52.010
+There is no appropriate aggregation
+function for this, given that female and
+
+70
+00:03:52.010 --> 00:03:54.560
+male are words, not numbers.
+
+71
+00:03:54.560 --> 00:03:57.740
+Any query that tries to use an aggregation
+function other than count on
+
+72
+00:03:57.740 --> 00:04:00.180
+this column would crash
+in most database systems.
+
+73
+00:04:00.180 --> 00:04:02.540
+But the count function won't
+help you address your question,
+
+74
+00:04:02.540 --> 00:04:04.860
+because you don't want a count
+of the number of rows,
+
+75
+00:04:04.860 --> 00:04:06.750
+you want to know whether
+the employee was male or female.
+
+76
+00:04:07.800 --> 00:04:10.720
+You'll know some of the ways you can
+redesign your queries to handle these
+
+77
+00:04:10.720 --> 00:04:12.700
+types of situations by
+the end of this week, and
+
+78
+00:04:12.700 --> 00:04:15.720
+we'll learn a couple more
+strategies next week as well.
+
+79
+00:04:15.720 --> 00:04:19.090
+I warn you that especially if you're used
+to analyzing all your data in Excel,
+
+80
+00:04:19.090 --> 00:04:22.700
+it can take a little while to get used
+to the strategies you have to use.
+
+81
+00:04:22.700 --> 00:04:26.630
+I'll also mention that MySQL handles these
+mis-matched aggregation levels a little
+
+82
+00:04:26.630 --> 00:04:30.170
+differently than other database systems, a
+phenomenon that comes with its own set of
+
+83
+00:04:30.170 --> 00:04:33.920
+issues that you will learn more about in
+this week's MySQL dognition exercises.
+
+84
+00:04:35.090 --> 00:04:38.170
+Right after you learn how to break
+your data summaries up into groups,
+
+85
+00:04:38.170 --> 00:04:42.290
+next important thing you will learn
+this week is how to combine tables.
+
+86
+00:04:42.290 --> 00:04:46.180
+Combining tables is the essence of what
+makes relational databases useful and
+
+87
+00:04:46.180 --> 00:04:50.140
+once you know how to do it, it unlocks
+all kinds of analysis possibilities.
+
+88
+00:04:50.140 --> 00:04:53.910
+I'm very excited to help you take
+your SQL skills to the next level.
+
+89
+00:04:53.910 --> 00:04:56.930
+Enjoy the exercises and I'll check
+in with you with some extra advice
+
+90
+00:04:56.930 --> 00:04:59.920
+after you've had a chance to practice
+writing aggregation functions.
+
+91
+00:04:59.920 --> 00:05:02.740
+Then you'll see me again later in the week
+when I give you little more background
+
+92
+00:05:02.740 --> 00:05:03.680
+about how joints work.

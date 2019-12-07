@@ -1,0 +1,12 @@
+#!CONNECT=HK067_GNG/HK067_GNG@prod_ho3orc12_fm.world##,Connected
+#!MAX_ERROR=1000,
+#!OPF=TDP_LOADER_2.insert_cash_event,
+#in_principal,in_book,in_strategy,in_prime_broker,in_pb_account,in_pl_book_ccy_xrate,in_pl_book_ccy_xrate_mdiv,in_cpty,in_event_type,in_narrative,in_pay_rcv,in_amt,in_ccy,in_event_date,in_value_date,in_ident_type,in_ext_ident,in_inst_class,in_price_divisor,in_type,in_sec_event_id,in_behaviour_type,in_realise_difference_ind,in_logon,in_canc_amnd_ind,in_cnev_id
+FGOPLUS,FGOPLUS_SNR_USD,NONE,SCB,FGOPLUS_SCB_ACCTID,,,SCB,,,,"6,221.31",USD,14/05/2019,14/05/2019,,,,,,,,,,,
+FGOPLUS,FGOPLUS_SNR_USD,NONE,SCB,FGOPLUS_SCB_ACCTID,,,SCB,CASH_TFR,,,"757,427.42",USD,14/05/2019,14/05/2019,,,,,,,,,,,
+FGOPLUS,FGOPLUS_BK,NONE,SCB,FGOPLUS_SCB_ACCTID,,,SCB,CASH_TFR,,,"757,427.42",USD,14/05/2019,14/05/2019,,,,,,,,,,,
+FGOPLUS,FGOPLUS_BK,NONE,SCB,FGOPLUS_SCB_ACCTID,,,SCB,FUND_SVCES_FEE,,,"4,764.95",USD,14/05/2019,14/05/2019,,,,,,,,,,,
+FGOPLUS,FGOPLUS_BK,NONE,SCB,FGOPLUS_SCB_ACCTID,,,SCB,,,,"15,782.25",EUR,14/05/2019,14/05/2019,,,,,,,,,,,
+FGO,FGO_SNR_USD,NONE,SCB,FGO_SCB_ACCTID,,,SCB,CASH_TFR,,,"77,335.66",USD,14/05/2019,14/05/2019,,,,,,,,,,,
+FGO,FGO_BK,NONE,SCB,FGO_SCB_ACCTID,,,SCB,CASH_TFR,,,"77,335.66",USD,14/05/2019,14/05/2019,,,,,,,,,,,
+FGO,FGO_BK,NONE,SCB,FGO_SCB_ACCTID,,,SCB,FUND_SVCES_FEE,,,"4,757.14",USD,14/05/2019,14/05/2019,,,,,,,,,,,

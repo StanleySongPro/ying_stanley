@@ -1,0 +1,585 @@
+WEBVTT
+
+1
+00:00:05.290 --> 00:00:07.120
+Hey guys, welcome back.
+
+2
+00:00:07.120 --> 00:00:10.030
+In this video, we're going to go over
+how to use the homepage of your Jupyter
+
+3
+00:00:10.030 --> 00:00:13.410
+account to make new notebooks,
+rename them, reorganize them, and
+
+4
+00:00:13.410 --> 00:00:15.020
+share them with one another.
+
+5
+00:00:15.020 --> 00:00:15.735
+To get started,
+
+6
+00:00:15.735 --> 00:00:18.703
+I want you to go back to exactly where
+we left off after the last video.
+
+7
+00:00:21.050 --> 00:00:25.270
+So, if we go back to our notebook here.
+
+8
+00:00:26.730 --> 00:00:30.310
+This is the interface for
+our Exercise 2 notebook.
+
+9
+00:00:30.310 --> 00:00:33.260
+But if you want to go back
+to your home directory where
+
+10
+00:00:33.260 --> 00:00:37.530
+all the notebooks are held,
+click on the Jupyter icon right here.
+
+11
+00:00:39.590 --> 00:00:43.970
+When I click this, it brings me to
+this page, which is my home directory.
+
+12
+00:00:43.970 --> 00:00:46.050
+And you'll see all of the notebooks for
+
+13
+00:00:46.050 --> 00:00:48.610
+the course are listed here,
+all 12 of them.
+
+14
+00:00:48.610 --> 00:00:51.490
+And there's also an option here,
+
+15
+00:00:51.490 --> 00:00:54.070
+a notebook called Restore-my-notebook,
+which I'll explain in a little bit.
+
+16
+00:00:55.360 --> 00:00:59.900
+So in this interface, if you click on
+the box next to one of these notebooks,
+
+17
+00:00:59.900 --> 00:01:02.280
+you'll see that you have
+a couple of different options.
+
+18
+00:01:02.280 --> 00:01:04.840
+You can duplicate it.
+
+19
+00:01:04.840 --> 00:01:08.090
+You can shut it down and
+you can also get rid of it,
+
+20
+00:01:08.090 --> 00:01:12.510
+if you wanted to, which I don't suggest
+doing, but you could, if you wanted to.
+
+21
+00:01:12.510 --> 00:01:17.520
+So if you press duplicate,
+it'll ask you if you really
+
+22
+00:01:17.520 --> 00:01:22.360
+want to do that, and
+you'll see that it made a copy here.
+
+23
+00:01:23.420 --> 00:01:24.590
+Then you could get rid of that copy.
+
+24
+00:01:24.590 --> 00:01:28.160
+Make sure you only have the one you
+actually want to get rid of here.
+
+25
+00:01:28.160 --> 00:01:33.309
+And so, then you can press this little,
+
+26
+00:01:33.309 --> 00:01:37.860
+this button here and press Delete.
+
+27
+00:01:39.600 --> 00:01:45.240
+Now you'll see that these two notebooks
+and this notebook are green or
+
+28
+00:01:45.240 --> 00:01:49.670
+have a green note next to them and
+also have the word running next to them.
+
+29
+00:01:50.710 --> 00:01:54.430
+If you click on this Running tab,
+it will list for
+
+30
+00:01:54.430 --> 00:01:57.480
+you all of the notebooks that
+you currently have open.
+
+31
+00:01:57.480 --> 00:02:00.420
+So I opened some of these notebooks before
+I started giving you this demo, and
+
+32
+00:02:00.420 --> 00:02:02.660
+so all of them are currently open.
+
+33
+00:02:02.660 --> 00:02:07.870
+It's a good idea for you, and for
+the rest of your group of 100 and,
+
+34
+00:02:07.870 --> 00:02:11.440
+about 150 students and also for
+our resources here at Duke for
+
+35
+00:02:11.440 --> 00:02:14.820
+you to shutdown your notebooks
+when you're not using them.
+
+36
+00:02:14.820 --> 00:02:16.670
+It will save everything you've done.
+
+37
+00:02:16.670 --> 00:02:20.060
+So even if you don't clear the output,
+it'll save the output, and
+
+38
+00:02:20.060 --> 00:02:23.717
+if you've cleared the output,
+
+39
+00:02:23.717 --> 00:02:28.130
+it will still save the queries you wrote
+and save any of the cells you wrote.
+
+40
+00:02:28.130 --> 00:02:32.630
+So all you're doing when you're pressing
+Shutdown is helping to preserve resources.
+
+41
+00:02:32.630 --> 00:02:34.790
+You're not going to lose any of the work.
+
+42
+00:02:34.790 --> 00:02:37.940
+So we'd really appreciate if when you're
+not using your notebooks you shut
+
+43
+00:02:37.940 --> 00:02:39.450
+them down in between.
+
+44
+00:02:39.450 --> 00:02:45.740
+So the easiest way to do that is to go
+to this Running tab and press Shutdown.
+
+45
+00:02:45.740 --> 00:02:48.890
+But I'll show you you can also
+do it on the Files tab so
+
+46
+00:02:48.890 --> 00:02:56.250
+if I wanted to close this one,
+I can click this check mark box and
+
+47
+00:02:56.250 --> 00:03:00.100
+I can say shutdown here as well, and
+now you can see it's no longer running.
+
+48
+00:03:01.840 --> 00:03:06.540
+Another part of this screen that you
+might find useful is over here and
+
+49
+00:03:06.540 --> 00:03:08.550
+you can actually create
+your own notebooks.
+
+50
+00:03:08.550 --> 00:03:11.830
+So if you wanted to take some notes or
+you wanted to try some new things and you
+
+51
+00:03:11.830 --> 00:03:15.470
+wanted to do it in a completely separate
+notebook than the ones we've provided,
+
+52
+00:03:15.470 --> 00:03:19.310
+you can go over to here to New and
+you could either create a text file,
+
+53
+00:03:19.310 --> 00:03:23.600
+if you wanted to keep notes that way,
+or you can create your own notebook.
+
+54
+00:03:23.600 --> 00:03:27.060
+If you are going to create a new notebook,
+choose the Python 3 option.
+
+55
+00:03:27.060 --> 00:03:29.113
+So let's go ahead and create a new one.
+
+56
+00:03:29.113 --> 00:03:34.176
+And it'll bring you to a screen like this,
+you can change the title up here.
+
+57
+00:03:42.812 --> 00:03:46.486
+And you can add new cells as you like,
+and again,
+
+58
+00:03:46.486 --> 00:03:51.870
+you would want to change this to
+Markdown or Code as you see appropriate.
+
+59
+00:03:54.100 --> 00:03:55.660
+Let's go back to our home screen.
+
+60
+00:03:56.940 --> 00:04:01.983
+And let's go ahead and close down this
+new notebook we just ran or we just made.
+
+61
+00:04:04.560 --> 00:04:06.947
+The other thing I'd like to
+show you is this button here,
+
+62
+00:04:06.947 --> 00:04:08.500
+which is the Upload button.
+
+63
+00:04:08.500 --> 00:04:12.410
+So this is how you guys can share your
+Jupyter notebooks with each other.
+
+64
+00:04:12.410 --> 00:04:17.920
+So if you click on Upload,
+it will give you a navigation screen and
+
+65
+00:04:17.920 --> 00:04:23.450
+you can navigate to wherever you've
+saved notebooks, and once you find one,
+
+66
+00:04:23.450 --> 00:04:28.760
+you can press Choose, and it will bring
+it right into your home screen here.
+
+67
+00:04:28.760 --> 00:04:32.010
+So that will provide a great way for
+you guys to work together.
+
+68
+00:04:32.010 --> 00:04:37.590
+The last thing I want to show you is
+this Restore-my-notebooks notebook.
+
+69
+00:04:37.590 --> 00:04:40.650
+We've provided this because, if you
+start playing around too much with your
+
+70
+00:04:40.650 --> 00:04:44.680
+notebooks, it is possible that you could
+get yourself into a situation where you've
+
+71
+00:04:44.680 --> 00:04:46.820
+just added so many different things.
+
+72
+00:04:46.820 --> 00:04:50.660
+Or somehow you've gotten into a place
+where your queries won't stop running and
+
+73
+00:04:50.660 --> 00:04:52.440
+everything seems to be crashing.
+
+74
+00:04:52.440 --> 00:04:56.460
+You can restore all of your notebooks
+again, as if you were just starting for
+
+75
+00:04:56.460 --> 00:04:57.640
+the first time.
+
+76
+00:04:57.640 --> 00:04:59.220
+However, if you do that,
+
+77
+00:04:59.220 --> 00:05:03.300
+it will restore all of your notebooks,
+not just one of them.
+
+78
+00:05:03.300 --> 00:05:08.190
+So if you click on Restore-my-notebooks,
+it's actually going to bring you to
+
+79
+00:05:08.190 --> 00:05:10.540
+a new notebook and
+you'll see the instructions here.
+
+80
+00:05:11.750 --> 00:05:13.880
+What you're going to do is
+if you want to use this,
+
+81
+00:05:13.880 --> 00:05:18.210
+you're going to run this
+line of code here, so
+
+82
+00:05:18.210 --> 00:05:22.530
+you would run the cell and then you
+would run it by pressing this button.
+
+83
+00:05:22.530 --> 00:05:25.930
+But as it says here,
+if you want to do this,
+
+84
+00:05:25.930 --> 00:05:31.110
+if you want to save any of your work from
+the previous notebooks you were using,
+
+85
+00:05:31.110 --> 00:05:35.120
+you have to rename the notebooks otherwise
+they're going to get overwritten.
+
+86
+00:05:35.120 --> 00:05:36.900
+So make sure you know how to do that.
+
+87
+00:05:36.900 --> 00:05:41.139
+You can do that using
+the Rename button here.
+
+88
+00:05:51.657 --> 00:05:52.840
+And it would look like that.
+
+89
+00:05:55.190 --> 00:05:58.780
+Another thing that might be useful to you,
+if you do start making a lot of your own
+
+90
+00:05:58.780 --> 00:06:02.930
+notebooks, is that you can make folders
+within your home directory here.
+
+91
+00:06:02.930 --> 00:06:06.540
+This functionality is a little bit
+cumbersome if you're not used to coding,
+
+92
+00:06:06.540 --> 00:06:09.110
+but I'll show you just in case
+it would be useful to you.
+
+93
+00:06:09.110 --> 00:06:12.250
+So if you go to New,
+you can click on Folder.
+
+94
+00:06:12.250 --> 00:06:13.900
+And it'll make a folder here.
+
+95
+00:06:13.900 --> 00:06:19.380
+You can then click to the left, click
+on Rename, call it something different.
+
+96
+00:06:31.685 --> 00:06:35.513
+But then if you wanted to put any
+of these notebooks into a folder,
+
+97
+00:06:35.513 --> 00:06:37.400
+it's a little bit cumbersome.
+
+98
+00:06:38.810 --> 00:06:40.240
+Click on Rename.
+
+99
+00:06:40.240 --> 00:06:44.600
+My goal is going to be to put this
+notebook into My Practice Notebooks.
+
+100
+00:06:44.600 --> 00:06:49.050
+Click on Rename, and now what you have to
+do is, you have to type in the name of
+
+101
+00:06:49.050 --> 00:06:55.653
+the folder before the name
+of your notebook,
+
+102
+00:06:55.653 --> 00:07:01.830
+so My Practice Notebooks,
+and then put a backslash.
+
+103
+00:07:03.130 --> 00:07:09.690
+Press OK, you'll see that my new
+notebook is no longer there.
+
+104
+00:07:09.690 --> 00:07:12.050
+If I press on this folder,
+there's my new notebook.
+
+105
+00:07:14.520 --> 00:07:18.090
+To get back to the home screen,
+press this little house button, and
+
+106
+00:07:18.090 --> 00:07:19.540
+that brings you back to your home screen.
+
+107
+00:07:20.730 --> 00:07:25.209
+The last thing you need to know is
+if you do decide to rename these
+
+108
+00:07:25.209 --> 00:07:30.000
+original notebooks that we've provided for
+you with the course, you will not be
+
+109
+00:07:30.000 --> 00:07:35.440
+able to access them directly from
+the link in the Coursera course website.
+
+110
+00:07:35.440 --> 00:07:39.200
+You'll have to go, they're two different
+types of links in the Coursera website.
+
+111
+00:07:39.200 --> 00:07:43.530
+There's a link that allows you to go to
+a specific lesson or a specific notebook.
+
+112
+00:07:43.530 --> 00:07:46.750
+And there's also a link that
+let's you go to your homepage.
+
+113
+00:07:46.750 --> 00:07:49.710
+The link that goes to a specific
+lesson will no longer work
+
+114
+00:07:49.710 --> 00:07:51.440
+if you change the name of that lesson.
+
+115
+00:07:51.440 --> 00:07:55.550
+But you can still go to the link
+that goes to your homepage.
+
+116
+00:07:55.550 --> 00:07:59.530
+So make sure you remember that if you
+do decide to rename these lessons for
+
+117
+00:07:59.530 --> 00:08:00.060
+some reason.
+
+118
+00:08:01.860 --> 00:08:04.000
+Well done.
+You now know everything you need to
+
+119
+00:08:04.000 --> 00:08:06.330
+know about how to use Jupyter for
+this course.
+
+120
+00:08:06.330 --> 00:08:08.640
+The next step is to go
+the course materials and
+
+121
+00:08:08.640 --> 00:08:12.050
+click on the link to MySQL exercise one,
+looking at your data.
+
+122
+00:08:12.050 --> 00:08:16.460
+I'll see you in the next video when you're
+ready to learn how to use tera data.
+
+123
+00:08:16.460 --> 00:08:17.540
+Good luck and have fun.

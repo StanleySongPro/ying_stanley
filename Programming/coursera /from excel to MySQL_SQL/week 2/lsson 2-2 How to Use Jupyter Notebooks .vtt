@@ -1,0 +1,1298 @@
+WEBVTT
+
+1
+00:00:04.500 --> 00:00:06.103
+Hi, guys, in the last video,
+
+2
+00:00:06.103 --> 00:00:09.020
+you got an introduction about
+how to write SQL queries.
+
+3
+00:00:09.020 --> 00:00:12.441
+In the next two videos,
+I'm going to give you a tour of Jupyter.
+
+4
+00:00:12.441 --> 00:00:16.057
+Jupyter is the front end interface
+we'll use in this course to interact
+
+5
+00:00:16.057 --> 00:00:19.320
+with our Dognition dataset,
+which is kept in a MySQL database.
+
+6
+00:00:20.710 --> 00:00:23.560
+I told you that there are many different
+types of frontend interfaces you might
+
+7
+00:00:23.560 --> 00:00:25.090
+encounter in your career.
+
+8
+00:00:25.090 --> 00:00:28.130
+Despite all these options,
+Jupiter is really unique.
+
+9
+00:00:28.130 --> 00:00:29.340
+It was written explicitly for
+
+10
+00:00:29.340 --> 00:00:33.400
+collaboration, which also happens to
+make it very useful for education.
+
+11
+00:00:33.400 --> 00:00:38.333
+What Jupyter does, is it allows me a way
+to write in text, an explanation for
+
+12
+00:00:38.333 --> 00:00:43.050
+every query you try and help you
+understand the logic behind each query.
+
+13
+00:00:43.050 --> 00:00:46.732
+And then you can read that text at your
+own pace and try out different parts of
+
+14
+00:00:46.732 --> 00:00:50.370
+the query right in the same place and
+look at the examples at the same time.
+
+15
+00:00:50.370 --> 00:00:54.891
+So I think you'll find this a very useful
+way to get comfortable with SQL syntax.
+
+16
+00:00:54.891 --> 00:00:58.391
+Of course when you're in a company, you're
+not going to be able to have me there, and
+
+17
+00:00:58.391 --> 00:01:01.291
+you won't be able to have my examples
+right next to you, or at least,
+
+18
+00:01:01.291 --> 00:01:03.611
+not in the exact same place
+as your writing inquiries.
+
+19
+00:01:03.611 --> 00:01:08.427
+So what I suggest you do is you use these
+Jupyter MySQL exercises to get really
+
+20
+00:01:08.427 --> 00:01:10.391
+comfortable with the syntax.
+
+21
+00:01:10.391 --> 00:01:14.438
+Then once you're ready to be independent,
+at the end of each week,
+
+22
+00:01:14.438 --> 00:01:16.930
+then you move to the Teradata exercises.
+
+23
+00:01:16.930 --> 00:01:20.988
+The Teradata interface that we use in this
+course is very similar to what you would
+
+24
+00:01:20.988 --> 00:01:21.890
+use in a company.
+
+25
+00:01:21.890 --> 00:01:25.630
+And in fact, you might end up using the
+exact same interface in some companies.
+
+26
+00:01:25.630 --> 00:01:27.396
+But it does require you to be independent,
+
+27
+00:01:27.396 --> 00:01:31.470
+you'll have to write your queries from
+scratch and you won't have examples there.
+
+28
+00:01:31.470 --> 00:01:35.870
+So again, what I suggest you do, is start
+with MySQL and the Jupyter interface
+
+29
+00:01:35.870 --> 00:01:38.770
+then move to Teradata when you're
+ready to try things on your own.
+
+30
+00:01:39.860 --> 00:01:43.000
+I'll show you in a later video how
+to use the Teradate interface, but
+
+31
+00:01:43.000 --> 00:01:45.470
+in the next two videos we're
+going to focus on Jupyter.
+
+32
+00:01:45.470 --> 00:01:48.710
+And in this video in particular we're
+going to focus on how to work with
+
+33
+00:01:48.710 --> 00:01:50.760
+the notebook within Jupyter.
+
+34
+00:01:50.760 --> 00:01:53.620
+So to get started,
+what I want you to do, is I want you
+
+35
+00:01:53.620 --> 00:01:58.360
+click on one of the links in the course
+website that goes directly to a notebook.
+
+36
+00:02:00.570 --> 00:02:02.140
+When you go to one of those links,
+
+37
+00:02:02.140 --> 00:02:06.990
+it's going to bring you to
+a page that looks like this.
+
+38
+00:02:08.420 --> 00:02:10.850
+When you go to this page,
+go ahead and press open Tool.
+
+39
+00:02:11.910 --> 00:02:15.171
+And when you press that, it's going to
+bring up something that looks like this.
+
+40
+00:02:15.171 --> 00:02:20.330
+Now, each one of these lessons is
+contained in what we call a notebook.
+
+41
+00:02:20.330 --> 00:02:24.191
+And you can see immediately that
+the notebook has quite a lot of text.
+
+42
+00:02:24.191 --> 00:02:25.819
+And if I scroll down,
+
+43
+00:02:25.819 --> 00:02:31.070
+you'll see there are also lots of
+these places for you to write code.
+
+44
+00:02:31.070 --> 00:02:33.171
+Here's another one.
+
+45
+00:02:33.171 --> 00:02:37.099
+So the way to use these notebooks or
+to go through these lessons,
+
+46
+00:02:37.099 --> 00:02:40.446
+is to read the text and
+then follow the instructions and
+
+47
+00:02:40.446 --> 00:02:44.991
+the questions about what to write in
+these areas where you can write code.
+
+48
+00:02:44.991 --> 00:02:49.690
+Now just to let you know, each one of
+these areas is called a cell in Jupyter.
+
+49
+00:02:49.690 --> 00:02:52.592
+And I tell you that because I'm going to
+show you in a little bit what you can do
+
+50
+00:02:52.592 --> 00:02:54.010
+with some of these menu options.
+
+51
+00:02:54.010 --> 00:02:56.470
+And one of the menu
+options is called cell.
+
+52
+00:02:56.470 --> 00:03:00.880
+So this menu option is for each one
+of these areas where you write code.
+
+53
+00:03:01.890 --> 00:03:07.110
+So to give you an idea of what it will
+look like when you actually use one
+
+54
+00:03:07.110 --> 00:03:13.275
+of these code cells, what you're going to
+do is you're going to write your query.
+
+55
+00:03:13.275 --> 00:03:16.240
+And it'll look like this.
+
+56
+00:03:16.240 --> 00:03:21.290
+And to the left, you're going to see
+the word In with some open brackets.
+
+57
+00:03:21.290 --> 00:03:24.250
+This is what it looks like
+before you run your query.
+
+58
+00:03:24.250 --> 00:03:27.680
+When you're ready to run your query you're
+going to press this button up here,
+
+59
+00:03:27.680 --> 00:03:28.560
+which is the arrow.
+
+60
+00:03:28.560 --> 00:03:31.700
+And you'll see when you hover
+over it it says run cell.
+
+61
+00:03:31.700 --> 00:03:34.948
+When I press this you're
+going to see an asterisk or
+
+62
+00:03:34.948 --> 00:03:38.920
+a little start that appears
+in between these parentheses.
+
+63
+00:03:38.920 --> 00:03:43.241
+The star is present and
+there as long as the query is running.
+
+64
+00:03:43.241 --> 00:03:48.491
+So if you're running a really long query
+that takes the database a long time to do,
+
+65
+00:03:48.491 --> 00:03:51.700
+that star will be there
+until the output is ready.
+
+66
+00:03:51.700 --> 00:03:54.261
+This particular query is
+going to happen pretty quickly.
+
+67
+00:03:54.261 --> 00:03:56.726
+So when I run this,
+you're going to see the star quickly, and
+
+68
+00:03:56.726 --> 00:03:59.160
+then right underneath it,
+you're going to see the output.
+
+69
+00:03:59.160 --> 00:04:00.661
+Let's see what that looks like.
+
+70
+00:04:00.661 --> 00:04:03.681
+You see the star, and now the output.
+
+71
+00:04:03.681 --> 00:04:06.744
+Now when you run a query
+that has a lot of output,
+
+72
+00:04:06.744 --> 00:04:09.740
+I want to show you a couple
+of different things.
+
+73
+00:04:09.740 --> 00:04:14.590
+This particular query
+outputted over 16,000 rows.
+
+74
+00:04:14.590 --> 00:04:18.830
+However, we have implemented some
+safeguards in these Jupyter interfaces so
+
+75
+00:04:18.830 --> 00:04:22.160
+that you are less likely
+to crash the system.
+
+76
+00:04:22.160 --> 00:04:25.950
+I told you earlier that we had
+specifically designed the course, so
+
+77
+00:04:25.950 --> 00:04:28.350
+that you are each in groups
+of about 150 students.
+
+78
+00:04:29.440 --> 00:04:33.070
+We want you to practice
+thinking about your colleagues.
+
+79
+00:04:33.070 --> 00:04:35.410
+And so, when you write queries
+that take a really long time, or
+
+80
+00:04:35.410 --> 00:04:38.030
+that take a lot resources,
+it impacts your colleagues.
+
+81
+00:04:38.030 --> 00:04:41.630
+In this course, too,
+when you run really long queries and
+
+82
+00:04:41.630 --> 00:04:46.620
+you take a lot of resources, it will
+affect everyone else in your group of 150.
+
+83
+00:04:46.620 --> 00:04:50.660
+It is possible to crash the system for
+your group of 150, but
+
+84
+00:04:50.660 --> 00:04:54.940
+we are giving you some safeguards
+to at least make that less likely.
+
+85
+00:04:54.940 --> 00:04:59.296
+So one of the things we've done here,
+is that even though the output has over
+
+86
+00:04:59.296 --> 00:05:03.880
+16,000 rows, if you scroll down all
+the way to the bottom of this output.
+
+87
+00:05:03.880 --> 00:05:07.300
+You'll see that it says truncated
+to display limit of 1000.
+
+88
+00:05:07.300 --> 00:05:09.408
+We've set this up explicitly so
+
+89
+00:05:09.408 --> 00:05:13.241
+that you only get 1,000 rows
+at a time in your output.
+
+90
+00:05:13.241 --> 00:05:15.321
+Now, I wanted to show you one more thing.
+
+91
+00:05:15.321 --> 00:05:20.262
+If you had lots of different
+columns in your output,
+
+92
+00:05:20.262 --> 00:05:23.518
+you would also see a bar down here,
+
+93
+00:05:23.518 --> 00:05:29.040
+a scroll bar down here that
+lets you scroll left and right.
+
+94
+00:05:29.040 --> 00:05:31.941
+So, make sure you number that for
+the future.
+
+95
+00:05:31.941 --> 00:05:34.980
+But, otherwise,
+this is what a output will look like.
+
+96
+00:05:34.980 --> 00:05:38.080
+And you can see that it says In up here,
+and IOut down here.
+
+97
+00:05:38.080 --> 00:05:42.380
+So, this is always where the output is.
+
+98
+00:05:42.380 --> 00:05:45.088
+A lot of the queries that we run in these
+
+99
+00:05:45.088 --> 00:05:49.926
+exercises are going to output tables
+that have a lot of rows in them.
+
+100
+00:05:49.926 --> 00:05:54.552
+And because there are that many rows,
+it takes a lot of juice for
+
+101
+00:05:54.552 --> 00:05:58.406
+Jupyter and
+the system to keep those tables around.
+
+102
+00:05:58.406 --> 00:06:02.169
+So if you don't need the output,
+if you're not going to learn from it, or
+
+103
+00:06:02.169 --> 00:06:06.624
+if you're not going to compare it to other
+things you're doing, it's a good idea to
+
+104
+00:06:06.624 --> 00:06:10.245
+delete that output so that Jupyter
+doesn't have to keep it online.
+
+105
+00:06:10.245 --> 00:06:16.225
+To do that, click on your output, go up to
+the Cell menu that I pointed out before.
+
+106
+00:06:16.225 --> 00:06:19.165
+Go to Current Output > Clear.
+
+107
+00:06:19.165 --> 00:06:24.705
+And you can see that now the output
+from this code cell is no longer there.
+
+108
+00:06:24.705 --> 00:06:27.985
+But I did want to show you one more
+thing in that cell menu that might be
+
+109
+00:06:27.985 --> 00:06:28.745
+useful to you.
+
+110
+00:06:28.745 --> 00:06:31.446
+Let's go ahead and run the query again.
+
+111
+00:06:31.446 --> 00:06:33.485
+And now click on the output.
+
+112
+00:06:33.485 --> 00:06:37.686
+And first let me point out to you so that
+you can see that we can scroll through
+
+113
+00:06:37.686 --> 00:06:39.765
+the output like I showed you before.
+
+114
+00:06:39.765 --> 00:06:44.645
+But now go to Cell >
+Current Output > Toggle Scrolling.
+
+115
+00:06:44.645 --> 00:06:50.146
+You can see now the output no longer has
+a scrollbar and it has the entire list.
+
+116
+00:06:50.146 --> 00:06:56.865
+So if you prefer seeing your output
+that way you are welcome to do so.
+
+117
+00:06:56.865 --> 00:07:03.745
+But we've made the default to have
+scrolling because it takes less space.
+
+118
+00:07:03.745 --> 00:07:07.987
+The next thing I want to show you, is what
+to do if you start a query that takes
+
+119
+00:07:07.987 --> 00:07:11.766
+a lot of time to run and you decide
+you don't want to run it anymore.
+
+120
+00:07:11.766 --> 00:07:15.966
+To do that, you can go up to this button.
+
+121
+00:07:15.966 --> 00:07:18.446
+You hover over it,
+it'll say interrupt kernel.
+
+122
+00:07:18.446 --> 00:07:21.565
+This is basically a stop button.
+
+123
+00:07:21.565 --> 00:07:24.840
+And so if you are running a query and it
+seems to be going forever and you decide,
+
+124
+00:07:24.840 --> 00:07:28.085
+you know what, I really don't know how
+to end need to know the answer to this.
+
+125
+00:07:28.085 --> 00:07:31.919
+And you're worried about say perhaps,
+crashing the system for
+
+126
+00:07:31.919 --> 00:07:33.346
+the rest of your group.
+
+127
+00:07:33.346 --> 00:07:36.725
+Go ahead and click on the query
+you're running and press stop.
+
+128
+00:07:36.725 --> 00:07:40.930
+And you saw it said interrupt kernel, so
+the other way you could do that is you
+
+129
+00:07:40.930 --> 00:07:44.625
+could go to this Kernel dropdown and
+you could click on Interrupt.
+
+130
+00:07:44.625 --> 00:07:49.478
+When you do stop a query it can sometimes
+take a little while to stop, so
+
+131
+00:07:49.478 --> 00:07:51.880
+you do have to be a little patient.
+
+132
+00:07:51.880 --> 00:07:56.230
+It will then output an error message or
+tell you the kernel was interrupted.
+
+133
+00:07:56.230 --> 00:07:59.700
+And you can start all over again,
+and either clear your output, or
+
+134
+00:07:59.700 --> 00:08:00.360
+add a new cell.
+
+135
+00:08:01.900 --> 00:08:06.510
+So speaking of a new cell, you've
+pretty much seen everything you have to
+
+136
+00:08:06.510 --> 00:08:08.650
+know to be able to use these notebooks,
+but
+
+137
+00:08:08.650 --> 00:08:12.270
+they actually have a lot more
+capability than what I just showed you.
+
+138
+00:08:13.490 --> 00:08:16.420
+And there's no way for
+us to configure these notebooks so
+
+139
+00:08:16.420 --> 00:08:18.410
+that it's impossible for you to edit them.
+
+140
+00:08:18.410 --> 00:08:22.850
+So that's a plus, in that it I'll show
+you how you can use this as ways to
+
+141
+00:08:22.850 --> 00:08:25.500
+take notes, and
+as ways to share things with each other.
+
+142
+00:08:25.500 --> 00:08:28.670
+That also means it's possible for
+you to edit these notebooks.
+
+143
+00:08:28.670 --> 00:08:31.230
+Even when it may not be
+to your benefit to do so.
+
+144
+00:08:31.230 --> 00:08:33.600
+So let me show you the good parts first.
+
+145
+00:08:33.600 --> 00:08:37.870
+Imagine that you wanted to take
+some notes about this query.
+
+146
+00:08:37.870 --> 00:08:42.419
+Each one of these areas that has
+code in it is called a cell, but so
+
+147
+00:08:42.419 --> 00:08:44.710
+are these areas that have text.
+
+148
+00:08:44.710 --> 00:08:46.097
+So if I click on this text,
+
+149
+00:08:46.097 --> 00:08:49.451
+you can see there's kind of a box
+here that surrounds the text.
+
+150
+00:08:49.451 --> 00:08:51.831
+So this is actually a cell as well.
+
+151
+00:08:51.831 --> 00:08:56.290
+And any cell that has text in
+it is written in what's called
+
+152
+00:08:56.290 --> 00:08:57.930
+markdown language.
+
+153
+00:08:57.930 --> 00:09:01.742
+So it's a very simple language that is
+used in a lot of different programs,,
+
+154
+00:09:01.742 --> 00:09:03.631
+especially on the web to format text.
+
+155
+00:09:03.631 --> 00:09:10.390
+So what you can do is you can
+actually include your own cell.
+
+156
+00:09:10.390 --> 00:09:15.470
+You can insert a cell yourself
+that has notes in it.
+
+157
+00:09:15.470 --> 00:09:19.651
+So if you go to Insert,
+you can say Insert Cell Above or Below.
+
+158
+00:09:19.651 --> 00:09:23.610
+We say, Insert Cell Above, you'll
+see that it put in the cell for you.
+
+159
+00:09:23.610 --> 00:09:28.070
+Now you do have to tell it what kind of
+input you want to put into that cell.
+
+160
+00:09:28.070 --> 00:09:32.250
+So if I am clicking on the cell and now I
+go up here and I see that it says Code.
+
+161
+00:09:32.250 --> 00:09:36.379
+What that means is that this cell,
+like this one, if I click on this,
+
+162
+00:09:36.379 --> 00:09:38.302
+you'll see it still says Code,
+
+163
+00:09:38.302 --> 00:09:42.170
+is configured to be able to
+actually write and execute queries.
+
+164
+00:09:42.170 --> 00:09:45.750
+This cell, on the other hand, when I
+click on it, you see it says Markdown.
+
+165
+00:09:45.750 --> 00:09:50.602
+So if I wanted to put my own notes into
+this cell, I would need to go up to
+
+166
+00:09:50.602 --> 00:09:55.730
+this menu and press Markdown, and
+now I can type in whatever text I want.
+
+167
+00:10:01.190 --> 00:10:04.890
+And I will have this for later.
+
+168
+00:10:04.890 --> 00:10:10.284
+You don't have to run it, but if you
+want to format just like you do up here,
+
+169
+00:10:10.284 --> 00:10:12.990
+then you actually will run the cell.
+
+170
+00:10:12.990 --> 00:10:15.810
+So I am clicking on the cell and
+I am pressing run again.
+
+171
+00:10:15.810 --> 00:10:19.031
+And now you can see that it's
+formatted the same way this is.
+
+172
+00:10:19.031 --> 00:10:24.270
+So there are a lot of tricks you can
+do to format your markdowns cells.
+
+173
+00:10:24.270 --> 00:10:27.730
+I'll show you in a little bit where you
+can go to find out more about that.
+
+174
+00:10:27.730 --> 00:10:29.698
+Because it's not a major
+part of this course,
+
+175
+00:10:29.698 --> 00:10:31.220
+I don't want to go over the details.
+
+176
+00:10:31.220 --> 00:10:35.105
+But I am going to show you resources where
+you can find all the information you need
+
+177
+00:10:35.105 --> 00:10:37.920
+to know about how to use markdown
+if you decide you want to.
+
+178
+00:10:39.420 --> 00:10:42.880
+So once you've made cells
+you can move them around.
+
+179
+00:10:42.880 --> 00:10:49.640
+You can either use these buttons
+here to move a cell up or down.
+
+180
+00:10:49.640 --> 00:10:55.770
+Or you can use this drop-down menu, and
+you can say I'm going to cut a cell.
+
+181
+00:10:55.770 --> 00:10:58.250
+And then you can go to someplace
+else in your notebook.
+
+182
+00:11:01.011 --> 00:11:01.970
+And paste it there.
+
+183
+00:11:01.970 --> 00:11:05.630
+So you can say, Paste Cell Above, Below,
+Paste In Place, all of these options.
+
+184
+00:11:05.630 --> 00:11:07.849
+Feel free to play around with them.
+
+185
+00:11:07.849 --> 00:11:13.011
+And this will give you a nice way to be
+able to take notes that you can save for
+
+186
+00:11:13.011 --> 00:11:13.609
+later.
+
+187
+00:11:13.609 --> 00:11:18.165
+Now, the down side of this, of course,
+is even if you don't want to take notes,
+
+188
+00:11:18.165 --> 00:11:22.669
+it's very easy to mess around with these
+tech cells I made for you by accident.
+
+189
+00:11:22.669 --> 00:11:26.789
+So, if you're clicking around and you
+double-click on one of these tech cells,
+
+190
+00:11:26.789 --> 00:11:29.910
+that's how you start editing on
+one of these markdown cells.
+
+191
+00:11:29.910 --> 00:11:32.620
+You'll see it suddenly
+starts to look like this.
+
+192
+00:11:32.620 --> 00:11:34.020
+It'll look a little weird.
+
+193
+00:11:34.020 --> 00:11:37.650
+This is the text written
+in markdown language.
+
+194
+00:11:37.650 --> 00:11:39.990
+And so if this happens to you,
+don't worry.
+
+195
+00:11:39.990 --> 00:11:40.670
+Don't panic.
+
+196
+00:11:40.670 --> 00:11:43.620
+All you need to do is
+press the run button and
+
+197
+00:11:43.620 --> 00:11:45.730
+it'll go back again to
+looking like normal.
+
+198
+00:11:45.730 --> 00:11:49.470
+So just to show you that one more time, if
+by accident you click on one of the text
+
+199
+00:11:49.470 --> 00:11:54.270
+cells and you double click, this gives
+you an opportunity to edit the text cell.
+
+200
+00:11:54.270 --> 00:11:57.040
+So if you don't want to do that,
+press the run button again and
+
+201
+00:11:57.040 --> 00:11:59.880
+it will look like it did when
+you first received the notebook.
+
+202
+00:12:01.130 --> 00:12:04.412
+As you are drafting with the notebook,
+
+203
+00:12:04.412 --> 00:12:08.500
+Jupyter will automatically
+be saving changes.
+
+204
+00:12:08.500 --> 00:12:11.680
+But you can also save them yourself.
+
+205
+00:12:11.680 --> 00:12:16.183
+So if you go up to File > Save and
+Checkpoint,
+
+206
+00:12:16.183 --> 00:12:20.460
+that will save the workbook
+as you made it.
+
+207
+00:12:20.460 --> 00:12:23.820
+And it will also make what
+is called a Checkpoint.
+
+208
+00:12:23.820 --> 00:12:27.011
+Checkpoints are a specific
+point in time and
+
+209
+00:12:27.011 --> 00:12:32.860
+what Jupyter does it saves exactly
+how the notebook looks at the time.
+
+210
+00:12:32.860 --> 00:12:37.090
+What that allows you to do, is if you
+start playing around and then mess things
+
+211
+00:12:37.090 --> 00:12:41.600
+up or don't like what you've done, you
+can go up to File > Revert to Checkpoint.
+
+212
+00:12:41.600 --> 00:12:46.077
+And it will give you a list of
+the different checkpoints you've made and
+
+213
+00:12:46.077 --> 00:12:50.120
+you can choose any one of them to
+go back to where you were before.
+
+214
+00:12:50.120 --> 00:12:54.404
+And it will give you this option, so
+you can choose to either revert or not,
+
+215
+00:12:54.404 --> 00:12:57.481
+as it tells you,
+if you do revert it can't be undone.
+
+216
+00:12:57.481 --> 00:13:00.686
+So make sure if you do go back to
+a checkpoint you know you want you
+
+217
+00:13:00.686 --> 00:13:01.421
+want to do so.
+
+218
+00:13:01.421 --> 00:13:03.340
+So, we'll press Cancel.
+
+219
+00:13:03.340 --> 00:13:07.240
+Now before I show you what the next
+set of things about Jupyter,
+
+220
+00:13:07.240 --> 00:13:12.180
+there's a very important aspect of this
+interface that you should know about.
+
+221
+00:13:12.180 --> 00:13:14.240
+And that is the Help.
+
+222
+00:13:14.240 --> 00:13:18.160
+Jupyter has a great help resource.
+
+223
+00:13:18.160 --> 00:13:21.628
+Two different things that you should focus
+on in particular, but feel free to look
+
+224
+00:13:21.628 --> 00:13:25.180
+around any of these things, actually
+there are three things you should know.
+
+225
+00:13:25.180 --> 00:13:28.840
+First of all, there's an interface tour
+that I think you'll find very useful, so
+
+226
+00:13:28.840 --> 00:13:30.710
+I suggest you take a look at that.
+
+227
+00:13:30.710 --> 00:13:34.213
+But you can also look at
+either this Notebook Help or
+
+228
+00:13:34.213 --> 00:13:39.030
+this Markdown documentation,
+both of which are very, very useful.
+
+229
+00:13:39.030 --> 00:13:44.653
+So if we click on say Markdown Help,
+it will bring you to this webpage where
+
+230
+00:13:44.653 --> 00:13:49.660
+it gives you all kinds of instructions
+about how to use markdown.
+
+231
+00:13:49.660 --> 00:13:54.620
+So this is where you should
+go if you want to start
+
+232
+00:13:54.620 --> 00:13:59.340
+playing around with how
+you edit your cells.
+
+233
+00:13:59.340 --> 00:14:03.511
+Another thing that's very useful
+is the Notebook Help, and
+
+234
+00:14:03.511 --> 00:14:08.920
+that's gives you all kind of sections that
+tell you all about how to run a code.
+
+235
+00:14:08.920 --> 00:14:10.460
+The basics.
+
+236
+00:14:10.460 --> 00:14:13.261
+Really if you have any questions,
+this is where you should go.
+
+237
+00:14:13.261 --> 00:14:17.860
+This is the best place to
+find out any of your answers.
+
+238
+00:14:17.860 --> 00:14:22.645
+The last thing I want to show you before
+we go our home menu Is how to save your
+
+239
+00:14:22.645 --> 00:14:27.840
+notebooks, or print or export them so
+that you can look at them in another way.
+
+240
+00:14:27.840 --> 00:14:29.781
+Or so
+that you can share them with each other.
+
+241
+00:14:29.781 --> 00:14:32.740
+And to do that, go to File.
+
+242
+00:14:32.740 --> 00:14:35.521
+And there are a couple of
+different options for you.
+
+243
+00:14:35.521 --> 00:14:38.821
+So you can either download your
+notebook as an iPython notebook.
+
+244
+00:14:38.821 --> 00:14:43.310
+And I'll show you later how you can
+upload these into your home directory.
+
+245
+00:14:43.310 --> 00:14:47.730
+This provides a way for you guys in
+the course to interact with each other and
+
+246
+00:14:47.730 --> 00:14:50.810
+to share queries with each other and
+share what you're learning.
+
+247
+00:14:50.810 --> 00:14:55.150
+So that you can write
+your own text here and
+
+248
+00:14:55.150 --> 00:14:58.450
+show each other what queries are having
+and then you can help each other out.
+
+249
+00:14:58.450 --> 00:15:01.990
+Another thing you can do is you
+can save your notebook as a PDF.
+
+250
+00:15:01.990 --> 00:15:06.358
+So one way to do that is to go to
+the Download part of the menu and
+
+251
+00:15:06.358 --> 00:15:08.080
+click on PDF via LaTeX.
+
+252
+00:15:08.080 --> 00:15:10.280
+But this is actually not
+my favorite way to do it.
+
+253
+00:15:10.280 --> 00:15:14.234
+Because sometimes the LaTeX
+formatting is very spread out and
+
+254
+00:15:14.234 --> 00:15:15.760
+can take a lot of pages.
+
+255
+00:15:15.760 --> 00:15:18.356
+So my preferred way to do it
+is to go to Print Preview,
+
+256
+00:15:18.356 --> 00:15:20.961
+which will give you something
+that looks like this.
+
+257
+00:15:20.961 --> 00:15:23.115
+And this will be much more compact, and
+
+258
+00:15:23.115 --> 00:15:25.541
+will give you fewer
+pages in your print out.
+
+259
+00:15:25.541 --> 00:15:28.920
+So once you get this,
+you can go to File > Print.
+
+260
+00:15:28.920 --> 00:15:31.810
+And this next screen will look
+different on everybody's computer
+
+261
+00:15:31.810 --> 00:15:35.370
+because everyone will have a different
+configuration, and you might have a Mac or
+
+262
+00:15:35.370 --> 00:15:37.400
+PC, and so
+this will look a little different.
+
+263
+00:15:37.400 --> 00:15:40.920
+But there should always be some
+option to be able to print to a PDF.
+
+264
+00:15:40.920 --> 00:15:44.056
+So that will let you save a file for later
+so that you can look at your queries or
+
+265
+00:15:44.056 --> 00:15:44.680
+your notes.
+
+266
+00:15:44.680 --> 00:15:47.920
+Or will let you print them out so that you
+can look at them while you are studying.
+
+267
+00:15:50.860 --> 00:15:51.980
+Nice work.
+
+268
+00:15:51.980 --> 00:15:54.210
+You now know how to use
+a Jupyter notebook.
+
+269
+00:15:54.210 --> 00:15:56.960
+In the next video, I'm going to show
+you how you can use the home page
+
+270
+00:15:56.960 --> 00:16:00.680
+of your Jupiter account to make new
+notebooks, rename notebooks and
+
+271
+00:16:00.680 --> 00:16:02.350
+share notebooks with one another.
+
+272
+00:16:02.350 --> 00:16:03.200
+I'll see you in the next video.

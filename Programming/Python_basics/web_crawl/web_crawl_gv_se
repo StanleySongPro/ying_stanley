@@ -1,0 +1,104 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct  1 02:53:23 2019
+
+@author: olivia
+"""
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+import os, inspect
+import pandas as pd
+#%%
+def open_browser(path):
+    '''
+    1. Check documentation with: help(open_browser) or open_browser.__doc__
+    2. Headless Chrome in AWS:
+    https://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-python/
+    
+    Define a selenium webdriver with headless Chrome.
+    
+    Headless Chrome is shipping in Chrome 59. It's a way to run the Chrome browser 
+    in a headless environment. Essentially, running Chrome without chrome! It brings
+    all modern web platform features provided by Chromium and the Blink rendering 
+    engine to the command line.
+    
+    Why is that useful?
+    A headless browser is a great tool for automated testing and server environments
+    where you don't need a visible UI shell. For example, you may want to run some 
+    tests against a real web page, create a PDF of it, or just inspect how the 
+    browser renders an URL.
+    '''
+    chrome_path = path # full path of the chrome driver
+    chrome_options = webdriver.ChromeOptions()
+#    chrome_options.add_argument('headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage');
+    prefs = {"profile.managed_default_content_settings.images":2}
+    chrome_options.add_experimental_option("prefs",prefs)    
+    driver = webdriver.Chrome(executable_path = chrome_path,
+                              options=chrome_options) 
+    driver.implicitly_wait(10)
+    driver.set_page_load_timeout(30000)
+    return driver
+
+def get_info(browser_path=None, URL=None):
+    '''
+    use selenium to get data
+    1. get source data
+    2. define soup
+    3. extract useful data
+    '''
+    driver = open_browser(path=browser_path)
+    driver.get(URL)
+    
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+
+    
+    # scroll down until get enough data
+#    while len(UG_list_b)<num_of_data:
+#        print(f"<--------------- No of articles : {len(UG_list_b)}")
+#        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#        soup = BeautifulSoup(driver.page_source, 'html.parser')
+#        UG_list_b = soup.find_all(name="div",attrs={"class":"UG_list_b"})
+#        
+#    driver.quit()
+            
+    # process data extraction
+    film_titles=[]
+    descriptions=[]
+    times=[]
+    ratings=[]
+    for item in soup.find_all(name="div",attrs={"class":"caption"}):
+        film_title = item.find(name="div", attrs={"class":"ng-binding"}).getText()
+        film_titles.append(film_title)
+        
+        description = item.find(name="p",attrs={"class":"caption-pg ng-binding"})#.getText()
+        descriptions.append(description)
+ 
+        time = item.find(name="p",attrs={"class":"caption-times ng-binding"}) 
+        times.append(time)
+
+        rating = item.find(name="ul",attrs={"class":"rating list-unstyled list-inline"})
+        ratings.append(rating)
+
+
+    df_movies = pd.DataFrame(columns = ["film_title", "description", "time", "rating"])
+    df_movies['film_title'] = film_titles
+    df_movies['description'] = descriptions
+    df_movies['time'] = times
+    df_movies['rating'] = ratings
+    print(df_movies)
+    
+    df_movies.to_json(os.path.join(BASE, "gv.json"), orient="index")
+    
+    return df_movies
+    
+#%%
+BASE = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) #changable
+browser_path = os.path.join(BASE, "chromedriver") #changable
+URL = "https://www.gv.com.sg/#/"  #changable
+get_info(browser_path=browser_path, URL=URL)
+
+

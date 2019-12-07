@@ -1,0 +1,269 @@
+WEBVTT
+
+1
+00:00:04.187 --> 00:00:06.760
+Last week, we learned how
+databases are organized, and
+
+2
+00:00:06.760 --> 00:00:10.459
+practiced how to make and interpret ER
+diagrams and relational schemas, in order
+
+3
+00:00:10.459 --> 00:00:14.350
+to figure out how the data you want to
+analyze are stored in the database.
+
+4
+00:00:14.350 --> 00:00:17.480
+This week we are going to
+start writing SQL queries.
+
+5
+00:00:17.480 --> 00:00:20.120
+One of the first things you're going
+to learn is how to write queries that
+
+6
+00:00:20.120 --> 00:00:22.040
+are considerate to your coworkers.
+
+7
+00:00:22.040 --> 00:00:26.750
+We are going to write queries that analyze
+two sets of data from two real companies.
+
+8
+00:00:26.750 --> 00:00:30.120
+One dataset, donated from a local
+startup in Durham, North Carolina,
+
+9
+00:00:30.120 --> 00:00:33.550
+called Dognition has tables
+with over 1 million rows.
+
+10
+00:00:33.550 --> 00:00:36.280
+The other data set,
+donated from a national US department
+
+11
+00:00:36.280 --> 00:00:40.710
+store chain called Dilliard's,
+has tables with over 100 million rows.
+
+12
+00:00:40.710 --> 00:00:43.510
+An important thing to keep in mind
+when working with data of this size,
+
+13
+00:00:43.510 --> 00:00:46.280
+is that the queries you write
+will affect the speed at which
+
+14
+00:00:46.280 --> 00:00:48.820
+other people in the company
+can retrieve data.
+
+15
+00:00:48.820 --> 00:00:51.700
+This means that the opportunities
+you have to query a company's raw
+
+16
+00:00:51.700 --> 00:00:55.580
+data from its database are accompanied by
+a responsibility to write queries that
+
+17
+00:00:55.580 --> 00:00:58.130
+impact others as little as possible.
+
+18
+00:00:58.130 --> 00:01:00.950
+To give you practice with what
+this responsibility feels like,
+
+19
+00:01:00.950 --> 00:01:02.770
+the queries you will write in this course,
+
+20
+00:01:02.770 --> 00:01:07.270
+like those you'll write in a company, will
+affect other people's database experience.
+
+21
+00:01:07.270 --> 00:01:09.840
+We have built the MySQL
+database infrastructure for
+
+22
+00:01:09.840 --> 00:01:13.970
+this course to provide database access
+to groups of about 150 students each.
+
+23
+00:01:15.080 --> 00:01:18.850
+When you right a query that is extremely
+resource intensive, it can slow down or
+
+24
+00:01:18.850 --> 00:01:22.400
+even crash database access for
+everyone else in your group of a 150 or
+
+25
+00:01:22.400 --> 00:01:23.630
+so students.
+
+26
+00:01:23.630 --> 00:01:27.148
+And if does crash, don't worry,
+of course we'll restart it for you.
+
+27
+00:01:27.148 --> 00:01:30.260
+We had purposely designed the course
+this way to give you an opportunity
+
+28
+00:01:30.260 --> 00:01:34.070
+in a safe environment to learn the
+consequences of writing intensive queries.
+
+29
+00:01:34.070 --> 00:01:36.560
+We hope this will help motivate
+you to adopt practices that will
+
+30
+00:01:36.560 --> 00:01:39.420
+prevent you from writing these types of
+queries in the future when you are working
+
+31
+00:01:39.420 --> 00:01:40.870
+with databases in your own companies.
+
+32
+00:01:42.040 --> 00:01:45.070
+Another important thing you are going
+to learn in the first MySQL lesson
+
+33
+00:01:45.070 --> 00:01:49.440
+is how to use SQL queries to verity and
+describe all the contents in a database.
+
+34
+00:01:49.440 --> 00:01:53.510
+Two common ways you can accidentally write
+queries that take a very long time to run
+
+35
+00:01:53.510 --> 00:01:56.960
+are by asking a database to
+return all the data in a really,
+
+36
+00:01:56.960 --> 00:02:00.520
+really large table even though you
+don't need all the data in that table.
+
+37
+00:02:00.520 --> 00:02:04.657
+Or by asking a database to combine tables
+whose output has many more rows than you
+
+38
+00:02:04.657 --> 00:02:07.932
+expect due to many-to-many
+relationships in your columns or
+
+39
+00:02:07.932 --> 00:02:09.613
+duplicate values in your rows.
+
+40
+00:02:09.613 --> 00:02:12.262
+Therefore, one of the best
+ways to prevent yourself from
+
+41
+00:02:12.262 --> 00:02:16.950
+writing queries that are unnecessarily
+taxing, is to know your data in detail.
+
+42
+00:02:16.950 --> 00:02:20.330
+If you know which tables are large, and
+you know what to expect when you combine
+
+43
+00:02:20.330 --> 00:02:23.950
+information from different tables, you'll
+be less likely to unintentionally write
+
+44
+00:02:23.950 --> 00:02:27.880
+queries that make the database work
+really hard for no useful reason.
+
+45
+00:02:27.880 --> 00:02:31.440
+To prepare you to write these types of
+queries, the next two videos will tell you
+
+46
+00:02:31.440 --> 00:02:33.900
+all about the datasets
+we will be working with.
+
+47
+00:02:33.900 --> 00:02:37.140
+The following videos will show you how
+to interact with those data ets through
+
+48
+00:02:37.140 --> 00:02:39.600
+the user interfaces we set up for
+the course.
+
+49
+00:02:39.600 --> 00:02:42.270
+Then you will spend the rest of
+the week using these interfaces to
+
+50
+00:02:42.270 --> 00:02:43.630
+practice queries.
+
+51
+00:02:43.630 --> 00:02:45.960
+By the end of the week,
+you will be able to learn about and
+
+52
+00:02:45.960 --> 00:02:48.040
+describe all the contents
+of a database and
+
+53
+00:02:48.040 --> 00:02:52.290
+will be able to export data from specific
+tables in a socially responsible way.
+
+54
+00:02:52.290 --> 00:02:55.630
+It's going to be a very productive week,
+so I hope you're ready to learn.
+
+55
+00:02:55.630 --> 00:02:58.120
+Watch the next two videos about
+your datasets to get started.
