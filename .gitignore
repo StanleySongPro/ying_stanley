@@ -3,9 +3,9 @@
 *.ipynb_checkpoints
 *Icon?
 
-*/project_venv
-*/venv
-*/runs
+*project_venv
+*venv
+*runs
 
 *.pyc
 *.mp4
